@@ -90,12 +90,12 @@ app.post("/signup",async(req,res)=>{
     }
 
 })
-app.use(express.static(path.join(__dirname, '/client/build')));
-app.get("*", (req, res) =>{
-    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"), (err) =>{
-        res.status(500).send(err)
-    })
-})
+// app.use(express.static(path.join(__dirname, '/client/build')));
+// app.get("*", (req, res) =>{
+//     res.sendFile(path.resolve(__dirname, "client", "build", "index.html"), (err) =>{
+//         res.status(500).send(err)
+//     })
+// })
 
 app.listen(8000,()=>{
     console.log("port connected");
